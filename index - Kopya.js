@@ -5,7 +5,7 @@ var getJSON = require("get-json");
 app.set("view engine", "ejs");
 app.use(express.static('public'));
 
-getJSON('https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id=UCCaXdWt0SGQnVHxpGmpz_EQ&key=AIzaSyAfwVlJJBg1eegX0V8aefJ5dM9Gj6o5fXQ', function(error, response){
+getJSON('***', function(error, response){
     return subs=response.items[0].statistics.subscriberCount;
 });
 
