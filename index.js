@@ -5,9 +5,9 @@ var getJSON = require("get-json");
 app.set("view engine", "ejs");
 app.use(express.static('public'));
 
-getJSON('***', function(error, response){
+/*getJSON('***', function(error, response){
     return subs=response.items[0].statistics.subscriberCount;
-});
+});*/
 
 app.get("/gdpr", function(req, res) {
     res.render("gdpr");
@@ -19,7 +19,7 @@ app.get("/blog", function(req, res) {
 
 app.get("/", function(req, res) {
     res.render("index",{
-        sub: subs
+        /*sub: subs*/
     });
 });
 
