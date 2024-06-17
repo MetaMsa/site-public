@@ -1,13 +1,18 @@
 const express=require("express");
 const app=express();
-var getJSON = require("get-json");
+
+/*var subs = fetch("***")
+.then(response => response.json())
+.then(data => subs = data.items[0].statistics.subscriberCount);*/
+
+app.use(express.urlencoded({extended: false}));
 
 app.set("view engine", "ejs");
 app.use(express.static('public'));
 
-/*getJSON('***', function(error, response){
-    return subs=response.items[0].statistics.subscriberCount;
-});*/
+app.get("/game", function(req, res) {
+    res.render("game");
+});
 
 app.get("/gdpr", function(req, res) {
     res.render("gdpr");
@@ -27,4 +32,4 @@ app.get("*", function(req, res) {
     res.send("<center><h1>404</h1></center>");
 });
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 3000);
