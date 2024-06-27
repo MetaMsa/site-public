@@ -36,7 +36,7 @@
         "year": 2000,
         "compiled": "Derlenen",
         "c": "Evet",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/C_Sharp_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg"
     },
 
     {
@@ -44,7 +44,7 @@
         "year": 1947,
         "compiled": "Derlenen",
         "c": "Hayır",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Assembly_programming_language_logo.svg"
+        "image": "https://static-00.iconduck.com/assets.00/assembly-icon-512x512-tbwr7d4r.png"
     },
 
     {
@@ -52,7 +52,7 @@
         "year": 1995,
         "compiled": "Hem derlenen hem yorumlanan",
         "c": "Evet",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Java_programming_language_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/tr/2/2e/Java_Logo.svg"
     },
 
     {
@@ -100,7 +100,7 @@
         "year": 1987,
         "compiled": "Yorumlanan",
         "c": "Evet",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Perl_Logo_3.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/tr/e/e0/Programming-republic-of-perl.png"
     },
 
     {
