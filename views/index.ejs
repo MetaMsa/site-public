@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Serhat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2573992278913198"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
+    </head>
+    <body style="background-color:rgb(192, 214, 232);">
+        <header class="container-fluid" style="background-color: rgb(163, 67, 67);">
+            <div class="row">
+                <div class="col-3">
+                    <div class="loader"></div>
+                    <div align="center"><img src="/images/3da59a4e-59eb-42ef-ba79-70d24b85147b-_1_.jpg" style="border-radius: 100%; height:5rem;" alt="" style="width: 7%;"/></div>        
+                </div>
+                <div class="col-6">
+                    <h1 style="color: rgb(0, 0, 0); text-align:center; font-family:cursive" id="merhaba">M</h1>
+                </div>
+                <div class="col-3">
+                    <button id="button" class="col-6" onclick="menu()"></button>
+                    <div id="menu" class="col-6" style="display: none;">
+                        <nav style="position:relative; top:10%; font-size:small;"> 
+                            <a href="/">Anasayfa</a><br>    
+                            <a href="/blog">Blog</a><br>
+                            <a href="/game">Oyun</a>
+                        </nav>
+                    <div>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <div class="row">   
+                <div class="col-md-6">
+                    <div class="col-sm-6 col-lg-6">
+                        <img id="me" src="/images/3b584ae8-d108-4483-85db-d8c79c29d2ce.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <p>
+                            <h1 style="color: red; font-size:xx-large; text-align:center;">
+                                Mehmet Serhat ASLAN
+                            </h1>
+                            <p style="text-shadow: center;">
+                                E-Mail:
+                                <br>
+                                mserhataslan@hotmail.com
+                                <br>
+                                Youtube Abone Sayacı: <%= sub %>
+                                <progress value= <%= sub %> max="50"></progress>
+                            </p>
+                        </p>
+                    </div>
+               </div>
+               <div class="col-md-6">
+                <p style="text-align: left;">
+                    <br>
+                    2023 yılından itibaren Kocaeli Üniversitesi
+                    Bilgisayar Programcılığı bölümünde öğrenciyim.
+                    C, C++,C#, Visual Basic, Arduino dillerinde bilgi sahibiyim.
+                    Oyun geliştirme, yazılım geliştirme, robotik kodlama, Adobe ürünlerinde 2d-3d tasarım ve Blender konularında tecrübeliyim.
+                    Öğretim hayatım boyunca bilgisayar kulüpleri ve robotik takımlarında bulundum.
+                    Ekip çalışmasında iyiyim.
+                </p>
+               </div>
+            </div>
+        </main>
+        <footer class="container" style="width:auto;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="linkedin"><a href="https://www.linkedin.com/in/mehmet-serhat-aslan-58272b28a" style="height: 2rem;" aria-label="linkedin"></a><br></div>
+                    <div class="github"><a href="https://github.com/MetaMsa" style="height: 2rem;" aria-label="github"></a><br></div>
+                    <div class="youtube"><a href="https://www.youtube.com/@metamsa" style="height: 2rem;" aria-label="youtube"></a><br></div>     
+                </div>
+            </div>     
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+[
+    {
+        "name": "c",
+        "year": 1972,
+        "compiled": "Derlenen",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg"
+    },
+
+    {
+        "name": "python",
+        "year": 1991,
+        "compiled": "Yorumlanan",
+        "c": "Hayır",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+    },
+
+    {
+        "name": "c++",
+        "year": 1985,
+        "compiled": "Derlenen",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+    },
+
+    {
+        "name": "javascript",
+        "year": 1995,
+        "compiled": "Yorumlanan",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+    },
+
+    {
+        "name": "c#",
+        "year": 2000,
+        "compiled": "Derlenen",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg"
+    },
+
+    {
+        "name": "assembly",
+        "year": 1947,
+        "compiled": "Derlenen",
+        "c": "Hayır",
+        "image": "https://static-00.iconduck.com/assets.00/assembly-icon-512x512-tbwr7d4r.png"
+    },
+
+    {
+        "name": "java",
+        "year": 1995,
+        "compiled": "Hem derlenen hem yorumlanan",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/tr/2/2e/Java_Logo.svg"
+    },
+
+    {
+        "name": "php",
+        "year": 1995,
+        "compiled": "Yorumlanan",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+    },
+
+    {
+        "name": "ruby",
+        "year": 1995,
+        "compiled": "Yorumlanan",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg"
+    },
+
+    {
+        "name": "swift",
+        "year": 2014,
+        "compiled": "Derlenen",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg"
+    },
+
+    {
+        "name": "go",
+        "year": 2009,
+        "compiled": "Derlenen",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg"
+    },
+
+    {
+        "name": "rust",
+        "year": 2010,
+        "compiled": "Derlenen",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg"
+    },
+
+    {
+        "name": "perl",
+        "year": 1987,
+        "compiled": "Yorumlanan",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/tr/e/e0/Programming-republic-of-perl.png"
+    },
+
+    {
+        "name": "r",
+        "year": 1993,
+        "compiled": "Yorumlanan",
+        "c": "Hayır",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg"
+    },
+
+    {
+        "name": "kotlin",
+        "year": 2011,
+        "compiled": "Derlenen",
+        "c": "Evet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Kotlin_logo_2021.svg/345px-Kotlin_logo_2021.svg.png"
+    }
+]

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+[class*="col-"]{
+    float: left;
+}
+
+[id*="gamebox"]{
+    border: 5px solid rgb(255, 255, 255);
+    height: 20rem;
+    background-color: rgb(255, 0, 0);
+}
+
+.loader{
+    position: fixed;
+    top: 45%;
+    left: 48%;
+    animation-name: load;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    width: 2rem; 
+    height: 2rem;
+    background-color:#ff000000;
+    border: 10px solid rgb(255, 255, 255);
+    z-index: 2;
+}
+
+main{
+    position: relative;
+    top:-50%;   
+}
+
+footer{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    opacity: 50%;   
+}
+
+#game{
+    border: 3px solid black;
+}

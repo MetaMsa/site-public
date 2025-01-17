@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+[class*="col-"]{
+    float: left;
+}
+
+.loader{
+    position: fixed;
+    top: 45%;
+    left: 48%;
+    animation-name: load;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    width: 2rem; 
+    height: 2rem;
+    background-color:#ff000000;
+    border: 10px solid rgb(255, 0, 0);
+    z-index: 2;
+}
+
+@keyframes load {
+    0% {transform: rotate(0deg);}
+    50% {top: 30%; border-radius: 100%;}
+    100% {transform: rotate(360deg);}
+}

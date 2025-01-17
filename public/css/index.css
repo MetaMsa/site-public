@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+[class*="col-"]{
+    float: left;
+}
+
+@media only screen and (max-width: 452px){
+    footer{
+        position: relative;
+        float:left;
+    }
+}
+
+@media only screen and (min-width: 452px) {
+    footer{
+        position: absolute;
+        bottom: 4%;
+        float: left;
+    }  
+}
+
+.linkedin{
+    display: grid;
+    border-radius:10% ; 
+    background-image: url(/images/indir.png); 
+    background-size: 100%;
+    width: 2rem; 
+    height: 2rem;
+    position: relative;
+    left: -5%;
+}
+
+.github{
+    display: grid;
+    border-radius:100% ; 
+    background-image: url(/images/GitHub_Invertocat_Logo.svg.jpg); 
+    background-size: 100%;
+    width:2rem; 
+    height: 2rem;
+    position: relative;
+    left: -5%;
+}
+
+.youtube{
+    display:grid;
+    background-image: url(/images/Youtube_logo.png);
+    background-size: 100%;
+    width: 3rem;
+    height: 2rem;
+    position: relative;
+    left: -20%;
+}
+
+.loader{
+    position: fixed;
+    top: 45%;
+    left: 48%;
+    animation-name: load;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    width: 2rem; 
+    height: 2rem;
+    background-color:#ff000000;
+    border: 10px solid rgb(255, 0, 0);
+    z-index: 2;
+}
+
+@keyframes load {
+    0% {transform: rotate(0deg);}
+    50% {top: 30%; border-radius: 100%;}
+    100% {transform: rotate(360deg);}
+}
+
+main{
+    background: rgb(255, 255, 255);
+    border: 5px solid black;
+    margin-top:10%;
+}
+
+#me{
+    width: 5rem;
+    box-shadow: 1px 1px 1px 1px;
+    margin-top: 10%;
+}
+
+#button{
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/images/menu.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 1;
+    position:fixed;
+    right: 0%;
+}
+
+#menu{
+    position: fixed;
+    height:100%;
+    width: 70%;
+    background-color: rgb(233,200,116);
+    opacity: 0.9;
+}
