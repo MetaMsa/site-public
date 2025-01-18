@@ -26,11 +26,13 @@ fs.readFile(filePath, "utf-8", (err, data) => {
 
 var time = new Date("2024-05-23");
 var today = new Date();
-var timestamp = Math.floor((today - time) / (1000 * 60 * 60 * 24)) - 1;
+var timestamp = Math.floor((today - time) / (1000 * 60 * 60 * 24));
+
+var timestamp1 = timestamp;
 
 app.get("/game", function (req, res) {
   res.render("game", {
-    img: jsonData[timestamp % jsonData.length].image,
+    img: jsonData[timestamp1 % jsonData.length].image,
   });
 });
 
