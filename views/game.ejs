@@ -26,7 +26,7 @@
             event.preventDefault();
             var name = document.getElementById('game').value.toLowerCase().trim();
 
-            fetch('http://localhost:3000/submit', {
+            fetch('/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

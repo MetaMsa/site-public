@@ -26,7 +26,7 @@ fs.readFile(filePath, "utf-8", (err, data) => {
 
 var time = new Date("2024-05-23");
 var today = new Date();
-var timestamp = Math.floor((today - time) / (1000 * 60 * 60 * 24));
+var timestamp = Math.floor((today - time) / (1000 * 60 * 60 * 24)) - 1;
 
 app.get("/game", function (req, res) {
   res.render("game", {
@@ -48,39 +48,36 @@ app.post("/submit", (req, res) => {
   const match = jsonData.find((item) => item.name === name);
 
   if (match) {
-    if(match.name === namee){
+    if (match.name === namee) {
       statee = "dil doğru";
       compile = compiledd;
       c = cc;
       year = yearr;
-    }
-    else{
-      if(match.year === yearr){
+    } else {
+      if (match.year === yearr) {
         yearstatee = "yıl doğru";
         year = match.year;
       }
-      if(match.year < yearr){
+      if (match.year < yearr) {
         yearstatee = "daha yeni";
         year = match.year;
       }
-      if(match.year > yearr){
+      if (match.year > yearr) {
         yearstatee = "daha eski";
         year = match.year;
       }
-      if(match.compiled === compiledd){
+      if (match.compiled === compiledd) {
         compilestate = true;
         compile = match.compiled;
       }
-      if (match.compiled !== compiledd){
+      if (match.compiled !== compiledd) {
         compilestate = false;
         compile = match.compiled;
       }
-      if(match.c === cc){
+      if (match.c === cc) {
         cstate = true;
         c = match.c;
-      }
-      else
-      {
+      } else {
         cstate = false;
         c = match.c;
       }
@@ -88,7 +85,15 @@ app.post("/submit", (req, res) => {
   } else {
     statee = "bulunamadı";
   }
-  res.json({ state: statee , yearstate: yearstatee, compilestate: compilestate, cstate: cstate , year: year, c: c , compile: compile});
+  res.json({
+    state: statee,
+    yearstate: yearstatee,
+    compilestate: compilestate,
+    cstate: cstate,
+    year: year,
+    c: c,
+    compile: compile,
+  });
 });
 
 app.get("/gdpr", function (req, res) {
