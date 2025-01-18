@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const fs = require("fs");
-const { json } = require("stream/consumers");
+const bodyParser = require("body-parser");
 
 var subs = fetch(
   "https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id=UCCaXdWt0SGQnVHxpGmpz_EQ&key=AIzaSyAfwVlJJBg1eegX0V8aefJ5dM9Gj6o5fXQ"
@@ -11,12 +11,14 @@ var subs = fetch(
   .then((data) => (subs = data.items[0].statistics.subscriberCount));
 
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 const filePath = path.join(__dirname, "lang.json");
-let jsonData;
+var jsonData;
 
 fs.readFile(filePath, "utf-8", (err, data) => {
   jsonData = JSON.parse(data);
@@ -33,7 +35,8 @@ app.get("/game", function (req, res) {
 });
 
 app.post("/submit", (req, res) => {
-  let count = 0;
+  var statee = "dil yanlış";
+  var yearstatee, compilestate, cstate, year, compile, c;
 
   const { name } = req.body;
 
@@ -42,63 +45,50 @@ app.post("/submit", (req, res) => {
   var compiledd = jsonData[timestamp % jsonData.length].compiled;
   var cc = jsonData[timestamp % jsonData.length].c;
 
-  var statee;
+  const match = jsonData.find((item) => item.name === name);
 
-  for (let i = 0; i < jsonData.length; i++) {
-    if (jsonData[i].name === name) {
-      if (jsonData[i].name === namee) {
-        statee = "doğru";
-
-        count++;
-      } else {
-        if (jsonData[i].year > yearr) {
-          statee = "daha eski";
-
-          count++;
-        }
-
-        if (jsonData[i].year === yearr) {
-          statee = "yıl doğru";
-
-          count++;
-        }
-
-        if (jsonData[i].year < yearr) {
-          statee = "daha yeni";
-
-          count++;
-        }
-
-        if (jsonData[i].compiled === compiledd) {
-          statee = "derleme doğru";
-
-          count++;
-        }
-
-        if (jsonData[i].compiled !== compiledd) {
-          statee = "derleme yanlış";
-
-          count++;
-        }
-
-        if (jsonData[i].c === cc) {
-          statee = "c doğru";
-
-          count++;
-        }
-
-        if (jsonData[i].c !== cc) {
-          count++;
-        }
+  if (match) {
+    if(match.name === namee){
+      statee = "dil doğru";
+      compile = compiledd;
+      c = cc;
+      year = yearr;
+    }
+    else{
+      if(match.year === yearr){
+        yearstatee = "yıl doğru";
+        year = match.year;
+      }
+      if(match.year < yearr){
+        yearstatee = "daha yeni";
+        year = match.year;
+      }
+      if(match.year > yearr){
+        yearstatee = "daha eski";
+        year = match.year;
+      }
+      if(match.compiled === compiledd){
+        compilestate = true;
+        compile = match.compiled;
+      }
+      if (match.compiled !== compiledd){
+        compilestate = false;
+        compile = match.compiled;
+      }
+      if(match.c === cc){
+        cstate = true;
+        c = match.c;
+      }
+      else
+      {
+        cstate = false;
+        c = match.c;
       }
     }
-  }
-
-  if (count == 0) {
+  } else {
     statee = "bulunamadı";
   }
-
-  res.json({ state: statee });
+  res.json({ state: statee , yearstate: yearstatee, compilestate: compilestate, cstate: cstate , year: year, c: c , compile: compile});
 });
 
 app.get("/gdpr", function (req, res) {
