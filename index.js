@@ -4,11 +4,11 @@ const path = require("path");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 
-var subs = fetch(
-  "https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id=UCCaXdWt0SGQnVHxpGmpz_EQ&key=AIzaSyAfwVlJJBg1eegX0V8aefJ5dM9Gj6o5fXQ"
+/*var subs = fetch(
+  "***"
 )
   .then((response) => response.json())
-  .then((data) => (subs = data.items[0].statistics.subscriberCount));
+  .then((data) => (subs = data.items[0].statistics.subscriberCount));*/
 
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -107,9 +107,7 @@ app.get("/blog", function (req, res) {
 });
 
 app.get("/", function (req, res) {
-  res.render("index", {
-    sub: subs,
-  });
+  res.render("index");
 });
 
 app.get("*", function (req, res) {
